@@ -1,5 +1,5 @@
 <?php
-namespace \PharSight;
+namespace Alviria\PharSight;
 
 class Generator
 {

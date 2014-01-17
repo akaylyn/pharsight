@@ -9,6 +9,6 @@
     "phpmd/phpmd": "1.5.*"
   },
   "autoload": {
-    "psr-4": { "Alviria\\PharSight": "src/" }
+    "psr-4": { "Alviria\\PharSight\\": "src" }
   }
 }
