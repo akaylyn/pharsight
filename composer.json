@@ -1,0 +1,12 @@
+{
+  "name": "alviria/pharsight",
+  "description": "create php archives for your applications",
+  "require-dev": {
+    "mockery/mockery": "0.8@stable",
+    "phpunit/phpunit": "3.7.*@stable",
+    "phpmd/phpmd": "1.5.*"
+  },
+  "autoload": {
+    "psr-4": { "Alviria\\PharSight": "src/Alviria/" }
+  }
+}

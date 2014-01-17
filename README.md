@@ -1,4 +1,4 @@
-phar-util
+pharsight
 =========
 
-Create PHP archives from a subset of your large scale application
+Create PHP archives from your code.
