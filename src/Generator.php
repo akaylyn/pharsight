@@ -9,6 +9,17 @@ class Generator
     public function __construct(\Phar $phar)
     {
         $this->phar = $phar;
+        $this->root = __DIR__;
+    }
+
+    /**
+     * Set the root for the current path
+     *
+     * By default, this is the path to the current file
+     */
+    public function setRootPath($path)
+    {
+        $this->root = $path;
     }
 
     public function addIncluded()
@@ -16,7 +27,7 @@ class Generator
         $files = get_included_files();
 
         foreach($files as $path) {
-            $localName = $this->geLocalName($path);
+            $localName = $this->getLocalName($path);
             try {
                 // remove the path prefix, this way every included file doesn't start
                 // with your local source path
@@ -30,7 +41,6 @@ class Generator
 
     public function setMain($path)
     {
-        $localName = $this->getLocalName($path);
         $this->phar->addFile($path, $localName);
         $this->phar->setDefaultStub($localName);
     }
